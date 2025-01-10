@@ -1,0 +1,113 @@
+/* General card styling */
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 320px;
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(145deg, #8d11da, #04100a);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Image styling */
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 2px solid #ffffff;
+}
+
+/* Info section */
+.card__info {
+  padding: 20px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.card__info h2 {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 0 0 10px;
+  color: #ffffff;
+}
+
+.card__info p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+  color: #f0d9f9;
+}
+
+/* Actions section */
+.card__actions {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 16px;
+}
+
+/* Like button */
+.like-button {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.heart-icon {
+  fill: none;
+  stroke: #ff6b6b;
+  stroke-width: 2.5;
+  transition: fill 0.3s, stroke 0.3s;
+}
+
+.heart-icon.liked {
+  fill: #ff6b6b;
+  stroke: #ff6b6b;
+  transform: scale(1.1);
+  transition: fill 0.3s ease, transform 0.3s ease;
+}
+
+/* Comment button */
+.comment-button {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.chat-icon {
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 2.5;
+  transition: stroke 0.3s ease;
+}
+
+.chat-icon:hover {
+  stroke: #ffcb6b;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+  .card {
+    width: 90%;
+  }
+
+  .card__info h2 {
+    font-size: 20px;
+  }
+
+  .card__info p {
+    font-size: 14px;
+  }
+}

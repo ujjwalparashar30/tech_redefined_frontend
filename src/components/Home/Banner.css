@@ -1,0 +1,85 @@
+/* Banner container */
+.banner {
+  width: 100%;
+  height: 600px;
+  position: relative;
+  overflow: hidden;
+  background-color: #f4f4f4;
+}
+
+/* Slider customization */
+.banner__slider .slick-dots li button:before {
+  color: #ffffff;
+}
+
+.banner__slider .slick-dots li.slick-active button:before {
+  color: #ff6f91;
+}
+
+.banner__slider .slick-prev,
+.banner__slider .slick-next {
+  z-index: 2;
+  color: #ffffff;
+  font-size: 24px;
+}
+
+/* Slide */
+.banner__slide {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 600px;
+  overflow: hidden;
+}
+
+/* Slide image */
+.banner__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Overlay for text */
+.banner__overlay {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.banner__title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff;
+  text-align: center;
+}
+
+/* Placeholder when no posts are available */
+.banner__placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 600px;
+  font-size: 20px;
+  color: #666;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .banner {
+    height: 400px;
+  }
+
+  .banner__slide {
+    height: 400px;
+  }
+
+  .banner__title {
+    font-size: 18px;
+  }
+}

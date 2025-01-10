@@ -1,0 +1,185 @@
+.post-view {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+  gap: 20px; /* Add spacing between sections for smaller screens */
+  background: linear-gradient(to bottom, #ffffff, #f3e5f5); /* Subtle gradient */
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.post-view__left {
+  flex: 1;
+  max-width: 100%; /* Adjust for smaller screens */
+  display: flex;
+  flex-direction: column;
+}
+
+.post-view__right {
+  flex: 1;
+  max-width: 100%;
+  padding-left: 20px;
+}
+
+.post-view__header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #ddd; /* Separator line */
+  padding-bottom: 10px;
+}
+
+.post-view__avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 15px;
+  border: 2px solid #512da8; /* Add border for a polished look */
+}
+
+.post-view__creator-name {
+  font-weight: bold;
+  font-size: 18px;
+  color: #512da8;
+}
+
+.post-view__image {
+  width: 100%;
+  max-width: 500px;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow to image */
+}
+
+.post-view__actions {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Spacing between action buttons */
+}
+
+.like-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.heart-icon {
+  width: 30px;
+  height: 30px;
+  color: gray;
+  transition: color 0.3s ease; /* Smooth transition */
+}
+
+.heart-icon.liked {
+  color: #e53935; /* Red color for liked state */
+}
+
+.post-view__details {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+.post-view__description {
+  font-size: 14px;
+  margin: 5px 0;
+  color: #444;
+}
+
+/* Comments Section Styling */
+.post-view__comments {
+  margin-top: 20px;
+  max-height: 300px;
+  overflow-y: auto;
+  border-top: 2px solid #ddd;
+  padding-top: 15px;
+  background: #fafafa; /* Light background for comments */
+  border-radius: 8px;
+  padding: 15px;
+}
+
+.post-view__comments-heading {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #512da8; /* Heading color */
+  border-bottom: 2px solid #512da8;
+  padding-bottom: 5px;
+  text-align: center; /* Center align the heading */
+}
+
+.post-view__comment {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.post-view__comment strong {
+  color: #512da8; /* Username color */
+  margin-bottom: 5px;
+  font-size: 14px; /* Slightly larger font for username */
+}
+
+.post-view__comment-text {
+  color: #333;
+  font-size: 14px;
+  margin-left: 10px; /* Indentation for comment text */
+}
+
+.post-view__comment-form {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  gap: 10px; /* Add spacing between input and button */
+}
+
+.post-view__comment-input {
+  flex: 1; /* Allow input to take up remaining space */
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  background-color: #f9f9f9;
+  color: #333;
+  transition: border-color 0.3s ease; /* Smooth border color transition */
+}
+
+.post-view__comment-input:focus {
+  border-color: #512da8; /* Highlight input on focus */
+}
+
+.post-view__comment-input::placeholder {
+  color: #aaa;
+}
+
+.post-view__comment-submit {
+  flex-shrink: 0; /* Prevent shrinking of button */
+  background-color: #512da8;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+.post-view__comment-submit:hover {
+  background-color: #673ab7;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .post-view {
+    flex-direction: column; /* Stack elements on smaller screens */
+  }
+
+  .post-view__left,
+  .post-view__right {
+    max-width: 100%; /* Full width for smaller screens */
+    padding: 0;
+  }
+}
