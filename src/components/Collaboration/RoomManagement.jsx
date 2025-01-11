@@ -25,7 +25,7 @@ const RoomManagement = ({ onJoinRoom, userId }) => {
   };
 
   useEffect(() => {
-    const socket = new WebSocket('ws://localhost:3001');
+    const socket = new WebSocket('https://tech-redefined-collaboration-server.onrender.com/');
 
     socket.onopen = () => {
 
